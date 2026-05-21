@@ -7,7 +7,9 @@ object morfeo{
         estado = "Cansado"
       } else {
         estado = "Descansado"
+      }
+      vitalidad -= 1
     }
-    vitalidad -= 1
-    }
+    method vit() = vitalidad   
+    method esElElegido() = esElElegido
 }

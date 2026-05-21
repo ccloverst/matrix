@@ -1,6 +1,9 @@
 object tryni{
     const esLaElegida = false 
     const vitalidad = 0
-    method vitalidad() = vitalidad
+
+    method vit() = vitalidad
     //saltar no afecta 
+    method esElElegido() = esLaElegida
+    method salta() = "Sin consecuencias"
 }

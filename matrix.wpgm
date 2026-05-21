@@ -1,0 +1,22 @@
+import Morfeo.*
+import Neo.*
+import Tryni.*
+import Nave.*
+
+program cuandoLaNaveChoca {
+  console.println("El elgido y sus amigos, son seguidos por una nave enemiga")
+  console.println("Ante tal enfrentamieto, termina en un choque inminente obligados a saltar para salvarse")
+  nave.pasajeros().forEach({pasajero =>
+  console.println("y por saltar "+ pasajero +" ahora tiene una Vitalidad de: " + pasajero.vit())//for each no funciona dentro de un pritinl
+})
+  nave.pasajeros().forEach({pasajero => nave.bajaPasajero(pasajero)})
+  console.println("Con ello, la nave queda con una cantidad de pasajeros: " + nave.cantidadPasajeros())
+}
+program cuandoLanaveEscaoa {
+  console.println("al ver que pudieron escapar con la aceleracion a exepcion de neo todos saltan")
+  nave.pasajeros().remove(neo)
+  nave.pasajeros().forEach({ pasajero =>
+  console.println("y por saltar "+ pasajero +" ahora tiene una Vitalidad de: " + pasajero.vit())})
+}
+
+
